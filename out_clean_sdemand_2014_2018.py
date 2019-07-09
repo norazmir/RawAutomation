@@ -3,7 +3,7 @@ import json
 
 # read csv file
 read_demand = pd.read_csv(
-    'C:/Users/norazmir.nordin/Desktop/out_clean_sdemand_2014_2018.csv')
+    'C:/Users/norazmir.nordin/Desktop/[raw file]')
 print(read_demand.head())
 
 # read json druid template
@@ -47,5 +47,5 @@ print(read_demand['DEMAND_DATE'].head())
 s = json.dumps(read_content)
 
 # create new json file
-with open("C:/Users/norazmir.nordin/Desktop/query_sdemand_2014_2018", "w") as f:
+with open("C:/Users/norazmir.nordin/Desktop/[output at raw json file]", "w") as f:
     f.write(s)
