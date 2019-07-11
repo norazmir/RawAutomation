@@ -3,11 +3,11 @@ import json
 
 # read csv file
 read_demand = pd.read_csv(
-    'C:/Users/norazmir.nordin/Desktop/[raw file]')
+    'C:/../[raw file]')
 print(read_demand.head())
 
 # read json druid template
-with open('C:/Users/norazmir.nordin/Desktop/Json_template.json') as access_json:
+with open('C:/../Json_template.json') as access_json:
     read_content = json.load(access_json)
 
 
