@@ -11,7 +11,7 @@ with open('C:/../Json_template.json') as access_json:
     read_content = json.load(access_json)
 
 
-# header of sdemand columns
+# header of columns values
 demand_list = read_demand.columns.to_list()
 print(demand_list)
 
@@ -37,15 +37,15 @@ print(jdimSpec)
 jdimSpec.update(dimensions=dimension_list)
 print(jdimSpec)
 
-read_demand['DEMAND_DATE'] = pd.to_datetime(read_demand.DEMAND_DATE, dayfirst=True)
-newDate = read_demand['DEMAND_DATE'].dt.strftime('%Y-%m-%d')
+read_demand[column_header] = pd.to_datetime(read_demand.column_header, dayfirst=True)
+newDate = read_demand[column_header].dt.strftime('%Y-%m-%d')
 
-read_demand['Time_Date'].update(newDate)
-print(read_demand['DEMAND_DATE'].head())
+read_demand[column_header].update(newDate)
+print(read_demand[column_header].head())
 
 # - for writing file to json file
 s = json.dumps(read_content)
 
 # create new json file
-with open("C:/Users/norazmir.nordin/Desktop/[output at raw json file]", "w") as f:
+with open("C:/../[output at raw json file]", "w") as f:
     f.write(s)
